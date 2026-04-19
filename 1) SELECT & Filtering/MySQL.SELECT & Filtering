@@ -1,0 +1,140 @@
+🧾 SQL Practice — SELECT & Filtering
+
+📌 Overview
+
+This folder contains my hands-on practice of SQL SELECT and Filtering operations using a real-world styled E-commerce Orders dataset made using AI.
+
+The goal of this practice was to build a strong foundation in:
+
+* Extracting data from tables
+* Applying conditions to filter data
+* Sorting and limiting results
+* Handling NULL values
+* Using pattern-based searches
+
+
+🗂️ Dataset Used
+
+Table Name: orders
+
+The dataset simulates an e-commerce platform with the following columns:
+
+* order_id — Unique identifier for each order
+* customer_name — Name of the customer
+* city — Customer location
+* category — Product category (Electronics, Clothing, Home)
+* product — Product purchased
+* order_date — Date of order
+* amount — Order value
+* payment_method — Mode of payment (UPI, Card, COD)
+
+
+The dataset includes:
+
+* 50+ rows
+* Multiple cities and categories
+* NULL values for realistic scenarios
+
+
+🧠 Concepts Practiced
+
+🔹 Basic Data Retrieval
+
+* Selecting all columns
+* Selecting specific columns
+
+🔹 Filtering Data
+
+* WHERE clause
+* Comparison operators (=, >, <, !=)
+* Logical operators (AND, OR, NOT)
+
+🔹 Advanced Filtering
+
+* BETWEEN for range queries
+* IN / NOT IN
+* LIKE for pattern matching (%, _)
+
+🔹 NULL Handling
+
+* Filtering NULL values
+* Filtering NOT NULL values
+
+🔹 Sorting & Limiting
+
+* ORDER BY (Ascending & Descending)
+* LIMIT for top N records
+
+
+💻 Sample Queries
+
+*** Show all records
+
+SELECT * FROM orders;
+
+*** Show only customer_name and city
+
+SELECT customer_name, city
+FROM orders;
+
+*** Find all orders from Delhi
+
+SELECT * FROM orders
+  WHERE city IN ("Delhi");
+
+*** Find orders where price is in the range 1000 to 5000
+
+SELECT * FROM orders 
+WHERE price BETWEEN 1000 AND 5000;
+
+*** Find orders where products are Mobile & Laptop
+
+SELECT * FROM orders 
+WHERE product IN ('Mobile', 'Laptop');
+
+*** Get orders from Mumbai where amount > 5000
+
+SELECT * FROM orders 
+WHERE city = 'Mumbai' AND price > 5000;
+
+*** Show orders where category is Clothing and quantity >= 4
+
+SELECT * FROM orders 
+WHERE category = 'Clothing' AND quantity >= 4;
+
+*** Get orders where payment_method is Card or UPI
+
+SELECT * FROM orders 
+WHERE payment_mode = 'Card' OR payment_mode = 'UPI';
+
+
+🎯 Key Learnings
+
+* Learned how to extract meaningful subsets of data
+* Understood how filtering impacts business insights
+* Practiced writing clean and readable SQL queries
+* Gained confidence in handling real-world messy data (NULLs, mixed values)
+* Improved logical thinking for query building.
+
+
+🚀 Next Steps
+
+Moving forward, I will be focusing on:
+
+* Aggregations (GROUP BY, HAVING)
+* Joins (multi-table queries)
+* Subqueries and window functions
+
+
+📌 Author
+
+Bhaswati Saikia
+Data Analyst at ALA Pvt Ltd
+SQL | Python | Power BI | Snowflake 
+
+bhaswatisaikia74@gmail.com
+
+______________________________________
+
+
+
